@@ -2,20 +2,20 @@
  <head>
   <title>Карточки</title>
   <style>
-   .Main
+   .container
    {
        background-color: #eeeeee;
        width: 1175px;
        height: 490px;
+       display: flex;
    }
 
-   .Main div
+   .card
    {
        margin: 17px;
        width: 350;
        height: 457;
        font-size: 163px;
-       float: left;
        text-align: center;
        font-family: sans-serif;
    }
@@ -25,7 +25,7 @@
        margin-top: 80px;
    }
 
-   .Main div div
+   .card-caption
    {
        font-size: 26px;
        color: #292929;
@@ -36,9 +36,10 @@
        text-align: left;
        box-shadow: 0 2px 5px;
        position: relative;
+       display: flex;
    }
 
-   .Main div div img
+   .card-caption img
    {
        position: absolute;
        left: 270px;
@@ -46,12 +47,12 @@
        display: none;
    }
 
-   .Main div:hover div img
+   .card:hover .card-caption img
    {
        display: block;
    }
 
-   .Main div div p
+   .card-caption p
    {
        margin: 10px;
        margin-top: 40px;
@@ -77,18 +78,18 @@
   </style>
  </head>
  <body>
-  <div class="Main">
-   <div id="card3"><p class="title">3</p><div>
+  <div class="container">
+   <div id="card3" class="card"><p class="title">3</p><div class="card-caption">
      <img src="strelka.png" />
      <p>Card 3</p>
     </div>
    </div>
-   <div id="card1"><p class="title">1</p><div>
+   <div id="card1" class="card"><p class="title">1</p><div class="card-caption">
      <img src="strelka.png" />
      <p>Card 1</p>
     </div>
    </div>
-   <div id="card2"><p class="title">2</p><div>
+   <div id="card2" class="card"><p class="title">2</p><div class="card-caption">
      <img src="strelka.png" />
      <p>Card 2</p>
     </div>
