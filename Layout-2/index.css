@@ -52,6 +52,28 @@ button::-moz-focus-inner {
     border: 0 !important;
 }
 
+.notify_info
+{
+	position: fixed;
+	background: black;
+	opacity: .7;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 500px;
+	max-width: 80%;
+	border-radius: 5.5px;
+	color: white;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 30em;
+	z-index: 3001;
+}
+
 .main-container
 {
     width: 1000px;
@@ -178,6 +200,35 @@ button::-moz-focus-inner {
 {
     content: url("img/car.png");
     margin-right: 12px;
+}
+
+.counter
+{
+    border: 1px solid grey;
+    width: 102px;
+    padding: 0px;
+}
+
+.counter__button
+{
+    margin: 0px;
+    padding: 0px;
+    min-width: 25px;
+}
+
+.counter__button:disabled
+{
+    color: grey;
+}
+
+.counter__input
+{
+    text-align: center;
+    outline: none;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
 }
 
 .info-form
