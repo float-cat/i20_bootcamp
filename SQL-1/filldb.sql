@@ -12,42 +12,51 @@ INSERT INTO Products (caption, price, priceWithDiscount, priceWithPromoCode, des
            ('Пиджак от Артура', 9000, 8700, 8220, 'Пиджак от Артура, что еще тут сказать'),
            ('Пиджачок с кулачок', 100, 80, 67, 'Специальная модель для мальчиков-с-пальчиков');
 
-INSERT INTO ChapterProduct (chapterId, productId) VALUES
+INSERT INTO ChapterProduct (chapterId, productId, isMain) VALUES
 (
     (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
-    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine')
+    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine'),
+    TRUE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
-    (SELECT id FROM Products WHERE caption = 'Рубашка Паутина')
+    (SELECT id FROM Products WHERE caption = 'Рубашка Паутина'),
+    TRUE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Свитеры'),
-    (SELECT id FROM Products WHERE caption = 'Рубашка Паутина')
+    (SELECT id FROM Products WHERE caption = 'Рубашка Паутина'),
+    FALSE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Свитеры'),
-    (SELECT id FROM Products WHERE caption = 'Свитер Мяу-мяу')
+    (SELECT id FROM Products WHERE caption = 'Свитер Мяу-мяу'),
+    TRUE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Свитеры'),
-    (SELECT id FROM Products WHERE caption = 'Свитер TX-3000')
+    (SELECT id FROM Products WHERE caption = 'Свитер TX-3000'),
+    TRUE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Брюки'),
-    (SELECT id FROM Products WHERE caption = 'Брюки DuoType')
+    (SELECT id FROM Products WHERE caption = 'Брюки DuoType'),
+    TRUE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Брюки'),
-    (SELECT id FROM Products WHERE caption = 'Брюки Кролика')
+    (SELECT id FROM Products WHERE caption = 'Брюки Кролика'),
+    TRUE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
-    (SELECT id FROM Products WHERE caption = 'Пиджак от Артура')
+    (SELECT id FROM Products WHERE caption = 'Пиджак от Артура'),
+    TRUE
 ),
 (
     (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
-    (SELECT id FROM Products WHERE caption = 'Пиджачок с кулачок')
+    (SELECT id FROM Products WHERE caption = 'Пиджачок с кулачок'),
+    TRUE
 );
 
 INSERT INTO Pictures (alt, url) VALUES
@@ -57,40 +66,49 @@ INSERT INTO Pictures (alt, url) VALUES
 ('Брюки', 'example.com/not-exist-pict-4.png'),
 ('Пиджак', 'example.com/not-exist-pict-5.png');
 
-INSERT INTO ProductPicture (productId, pictureId) VALUES
+INSERT INTO ProductPicture (productId, pictureId, isMain) VALUES
 (
     (SELECT id FROM Products WHERE caption = 'Рубашка Medicine'),
-    (SELECT id FROM Pictures WHERE alt = 'Рубашка')
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка'),
+    TRUE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Рубашка Паутина'),
-    (SELECT id FROM Pictures WHERE alt = 'Рубашка')
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка'),
+    TRUE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Рубашка Паутина'),
-    (SELECT id FROM Pictures WHERE alt = 'Рубашечка')
+    (SELECT id FROM Pictures WHERE alt = 'Рубашечка'),
+    FALSE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Свитер Мяу-мяу'),
-    (SELECT id FROM Pictures WHERE alt = 'Свитер')
+    (SELECT id FROM Pictures WHERE alt = 'Свитер'),
+    TRUE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Свитер TX-3000'),
-    (SELECT id FROM Pictures WHERE alt = 'Свитер')
+    (SELECT id FROM Pictures WHERE alt = 'Свитер'),
+    TRUE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Брюки DuoType'),
-    (SELECT id FROM Pictures WHERE alt = 'Брюки')
+    (SELECT id FROM Pictures WHERE alt = 'Брюки'),
+    TRUE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Брюки Кролика'),
-    (SELECT id FROM Pictures WHERE alt = 'Брюки')
+    (SELECT id FROM Pictures WHERE alt = 'Брюки'),
+    TRUE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Пиджак от Артура'),
-    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак'),
+    TRUE
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Пиджачок с кулачок'),
-    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак'),
+    TRUE
 );

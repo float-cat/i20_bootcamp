@@ -13,14 +13,14 @@ USE Catalog;
 CREATE TABLE Chapters (
     -- Уникальный идентификатор раздела
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    caption NVARCHAR(60) UNIQUE NOT NULL
+    caption NVARCHAR(60) NOT NULL
 );
 
 -- Таблица товаров каталога
 CREATE TABLE Products (
     -- Уникальный идентификатор каталога
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    caption NVARCHAR(60) UNIQUE NOT NULL,
+    caption NVARCHAR(60) NOT NULL,
     -- Цена
     price INT NOT NULL CHECK(price > 0),
     -- Цена со скидкой
@@ -37,6 +37,8 @@ CREATE TABLE ChapterProduct (
     chapterId INT NOT NULL,
     -- Идентификатор товара
     productId INT NOT NULL,
+    -- Флаг основного объекта
+    isMain BOOL DEFAULT TRUE,
     -- Первичный ключ - пара связанных значений
     PRIMARY KEY (chapterId, productId),
     -- Зависимость к первичному ключу раздела
@@ -61,6 +63,8 @@ CREATE TABLE ProductPicture (
     productId INT NOT NULL,
     -- Идентификатор картинки
     pictureId INT NOT NULL,
+    -- Флаг основного объекта
+    isMain BOOL DEFAULT TRUE,
     -- Первичный ключ - пара связанных значений
     PRIMARY KEY (productId, pictureId),
     -- Зависимость к первичному ключу товара
