@@ -4,7 +4,7 @@
 Спроектировать базу данных по техническому заданию
 
 ## ER-диаграмма
-![Диаграмма](https://sun9-33.userapi.com/impg/uKIf8wf6RGO8eH8nDFLYPy_jWExYPPAV2Ckp6Q/LLN9DbzSOhc.jpg?size=998x508&quality=96&sign=10b942af458bbc8c15468bf169f020cf&type=album)
+![Диаграмма](https://sun9-22.userapi.com/impg/c9qf1l6CU9Udtl8VZ5yT6NcCRNoBPhw7IhcxGw/0VO_v26N-PI.jpg?size=998x508&quality=96&sign=a3e6e783aa5123687dacf07a149d2544&type=album)
 
 ## Описание связей
 Между разделами и товарами много ко многим, т.к. несколько разделов у товара и несколько товаров у раздела. Причем как минимум 1 раздел должен быть у товара, т.к. без разделов не предусмотрена навигация по товарам по ТЗ.

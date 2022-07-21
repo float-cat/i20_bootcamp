@@ -16,6 +16,16 @@ CREATE TABLE Chapters (
     caption NVARCHAR(60) NOT NULL
 );
 
+-- Таблица картинок
+CREATE TABLE Pictures (
+    -- Уникальный идентификатор картинки
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -- Альтернативный текст картинки
+    alt NVARCHAR(60) NOT NULL,
+    -- Адрес картинки
+    url TEXT(1000) NOT NULL
+);
+
 -- Таблица товаров каталога
 CREATE TABLE Products (
     -- Уникальный идентификатор каталога
@@ -28,7 +38,14 @@ CREATE TABLE Products (
     -- Цена с промокодом
     priceWithPromoCode INT DEFAULT NULL CHECK(priceWithPromoCode > 0),
     description NVARCHAR(500) DEFAULT NULL,
-    isActive BOOL NOT NULL DEFAULT TRUE
+    -- Флаг активного/неактивного товара
+    isActive BOOL NOT NULL DEFAULT TRUE,
+    chapterId INT NOT NULL,
+    pictureId INT NOT NULL,
+    -- Зависимость к первичному ключу раздела
+    FOREIGN KEY (chapterId) REFERENCES Chapters(id),
+    -- Зависимость к первичному ключу картинки
+    FOREIGN KEY (pictureId) REFERENCES Pictures(id)
 );
 
 -- Таблица раздел-товар (связь много-ко-многим)
@@ -37,8 +54,6 @@ CREATE TABLE ChapterProduct (
     chapterId INT NOT NULL,
     -- Идентификатор товара
     productId INT NOT NULL,
-    -- Флаг основного объекта
-    isMain BOOL DEFAULT TRUE,
     -- Первичный ключ - пара связанных значений
     PRIMARY KEY (chapterId, productId),
     -- Зависимость к первичному ключу раздела
@@ -47,24 +62,12 @@ CREATE TABLE ChapterProduct (
     FOREIGN KEY (productId) REFERENCES Products(id)
 );
 
--- Таблица картинок
-CREATE TABLE Pictures (
-    -- Уникальный идентификатор картинки
-    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    -- Альтернативный текст картинки
-    alt NVARCHAR(60) NOT NULL,
-    -- Адрес картинки
-    url TEXT(1000) NOT NULL
-);
-
 -- Таблица товар-картинка (связь много-ко-многим)
 CREATE TABLE ProductPicture (
     -- Идентификатор товара
     productId INT NOT NULL,
     -- Идентификатор картинки
     pictureId INT NOT NULL,
-    -- Флаг основного объекта
-    isMain BOOL DEFAULT TRUE,
     -- Первичный ключ - пара связанных значений
     PRIMARY KEY (productId, pictureId),
     -- Зависимость к первичному ключу товара
