@@ -33,16 +33,245 @@ INSERT INTO Products (caption, price, priceWithDiscount, priceWithPromoCode, des
             (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
            ('Пиджачок с кулачок', 100, 80, 67, 'Специальная модель для мальчиков-с-пальчиков',
             (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 1', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 2', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 3', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 4', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 5', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 6', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 7', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 8', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 9', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 10', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 11', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 12', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 13', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 14', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+            (SELECT id FROM Pictures WHERE alt = 'Пиджак')),
+           ('Пиджак 15', 3300, 3100, 2800, 'Нумерованная модель',
+            (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
             (SELECT id FROM Pictures WHERE alt = 'Пиджак'));
 
 INSERT INTO ChapterProduct (chapterId, productId) VALUES
 (
+    (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
+    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
+    (SELECT id FROM Products WHERE caption = 'Рубашка Паутина')
+),
+(
     (SELECT id FROM Chapters WHERE caption = 'Свитеры'),
     (SELECT id FROM Products WHERE caption = 'Рубашка Паутина')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Свитеры'),
+    (SELECT id FROM Products WHERE caption = 'Свитер Мяу-мяу')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Свитеры'),
+    (SELECT id FROM Products WHERE caption = 'Свитер TX-3000')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Брюки'),
+    (SELECT id FROM Products WHERE caption = 'Брюки DuoType')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Брюки'),
+    (SELECT id FROM Products WHERE caption = 'Брюки Кролика')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак от Артура')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджачок с кулачок')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 1')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 2')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 3')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 4')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 5')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 6')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 7')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 8')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 9')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 10')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 11')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 12')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 13')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 14')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
+    (SELECT id FROM Products WHERE caption = 'Пиджак 15')
 );
 
 INSERT INTO ProductPicture (productId, pictureId) VALUES
 (
+    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine'),
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Рубашка Паутина'),
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка')
+),
+(
     (SELECT id FROM Products WHERE caption = 'Рубашка Паутина'),
     (SELECT id FROM Pictures WHERE alt = 'Рубашечка')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Свитер Мяу-мяу'),
+    (SELECT id FROM Pictures WHERE alt = 'Свитер')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Свитер TX-3000'),
+    (SELECT id FROM Pictures WHERE alt = 'Свитер')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Брюки DuoType'),
+    (SELECT id FROM Pictures WHERE alt = 'Брюки')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Брюки Кролика'),
+    (SELECT id FROM Pictures WHERE alt = 'Брюки')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак от Артура'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджачок с кулачок'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 1'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 2'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 3'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 4'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 5'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 6'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 7'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 8'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 9'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 10'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 11'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 12'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 13'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 14'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Пиджак 15'),
+    (SELECT id FROM Pictures WHERE alt = 'Пиджак')
 );
