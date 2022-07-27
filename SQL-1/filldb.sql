@@ -1,6 +1,10 @@
 USE Catalog;
 
-INSERT INTO Chapters (caption) VALUES ('Рубашки'), ('Свитеры'), ('Брюки'), ('Пиджаки');
+INSERT INTO Chapters (caption, description) VALUES
+    ('Рубашки', 'Красивые рубашки со всего света'),
+    ('Свитеры', 'Вязанные свитеры для любителей потеплее'),
+    ('Брюки', 'Брюки для тех, кому надоели шорты'),
+    ('Пиджаки', 'Стильные пиджаки всех размеров');
 
 INSERT INTO Pictures (alt, url) VALUES
 ('Рубашка', 'example.com/not-exist-pict-1.png'),
@@ -10,7 +14,7 @@ INSERT INTO Pictures (alt, url) VALUES
 ('Пиджак', 'example.com/not-exist-pict-5.png');
 
 INSERT INTO Products (caption, price, priceWithDiscount, priceWithPromoCode, description, chapterId, pictureId)
-	VALUES ('Рубашка Medicine', 2699, 2499, 2227, 'Рубашка Medicine выполнена из вискозной ткани с клетчатым узором.<br />Детали: прямой крой, отложной воротник, планка и манжеты на<br /> пуговицах, карман на груди.',
+    VALUES ('Рубашка Medicine', 2699, 2499, 2227, 'Рубашка Medicine выполнена из вискозной ткани с клетчатым узором.<br />Детали: прямой крой, отложной воротник, планка и манжеты на<br /> пуговицах, карман на груди.',
             (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
             (SELECT id FROM Pictures WHERE alt = 'Рубашка')),
            ('Рубашка Паутина', 2341, 2000, 1900, 'Рубашка Паутина сделана из обычной паутины',

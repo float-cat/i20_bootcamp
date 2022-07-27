@@ -13,7 +13,8 @@ USE Catalog;
 CREATE TABLE Chapters (
     -- Уникальный идентификатор раздела
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    caption NVARCHAR(60) NOT NULL
+    caption NVARCHAR(60) NOT NULL,
+    description NVARCHAR(500) DEFAULT NULL
 );
 
 -- Таблица картинок
