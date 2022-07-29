@@ -7,10 +7,10 @@
 ?>
 
 <?php
- if(isset($_GET['cat_id']))
-     include 'pages/catalog.php';
- else
-     include 'pages/categoryes.php';
+ if(isset($_GET['id']))
+     include 'pages/product.php';
+/* else
+     TODO: Редирект на 404; */
 ?>
 
 <?php

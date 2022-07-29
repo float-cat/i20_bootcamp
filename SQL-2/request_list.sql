@@ -53,7 +53,8 @@ WHERE pp.productId = {Айди товара};
 -- описание
 SELECT *
 FROM Products AS p
-WHERE p.id = {Айди товара};
+WHERE p.isActive = True
+    AND p.id = {Айди товара};
 
 -- 4. Задание на дополнительные баллы
 -- 4.1. Выводит все категории, даже с 0 товаров

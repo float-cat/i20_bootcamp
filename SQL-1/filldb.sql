@@ -7,16 +7,19 @@ INSERT INTO Chapters (caption, description) VALUES
     ('Пиджаки', 'Стильные пиджаки всех размеров');
 
 INSERT INTO Pictures (alt, url) VALUES
-('Рубашка', 'example.com/not-exist-pict-1.png'),
-('Рубашечка', 'example.com/not-exist-pict-2.png'),
-('Свитер', 'example.com/not-exist-pict-3.png'),
-('Брюки', 'example.com/not-exist-pict-4.png'),
-('Пиджак', 'example.com/not-exist-pict-5.png');
+('Рубашка', 'https://example.com/not-exist-pict-1.png'),
+('Рубашечка', 'https://example.com/not-exist-pict-2.png'),
+('Свитер', 'https://example.com/not-exist-pict-3.png'),
+('Брюки', 'https://example.com/not-exist-pict-4.png'),
+('Пиджак', 'https://example.com/not-exist-pict-5.png'),
+('Рубашка 1', 'img/rybashka-1.png'),
+('Рубашка 2', 'img/rybashka-2.png'),
+('Рубашка 3', 'img/rybashka-3.png');
 
 INSERT INTO Products (caption, price, priceWithDiscount, priceWithPromoCode, description, chapterId, pictureId)
     VALUES ('Рубашка Medicine', 2699, 2499, 2227, 'Рубашка Medicine выполнена из вискозной ткани с клетчатым узором.<br />Детали: прямой крой, отложной воротник, планка и манжеты на<br /> пуговицах, карман на груди.',
             (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
-            (SELECT id FROM Pictures WHERE alt = 'Рубашка')),
+            (SELECT id FROM Pictures WHERE alt = 'Рубашка 1')),
            ('Рубашка Паутина', 2341, 2000, 1900, 'Рубашка Паутина сделана из обычной паутины',
             (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
             (SELECT id FROM Pictures WHERE alt = 'Рубашка')),
@@ -185,7 +188,15 @@ INSERT INTO ChapterProduct (chapterId, productId) VALUES
 INSERT INTO ProductPicture (productId, pictureId) VALUES
 (
     (SELECT id FROM Products WHERE caption = 'Рубашка Medicine'),
-    (SELECT id FROM Pictures WHERE alt = 'Рубашка')
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка 1')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine'),
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка 2')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine'),
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка 3')
 ),
 (
     (SELECT id FROM Products WHERE caption = 'Рубашка Паутина'),

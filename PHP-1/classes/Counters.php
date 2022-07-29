@@ -24,11 +24,9 @@ class CatalogCounter
                          ON p.chapterId = c.id
                      JOIN Pictures AS pic
                          ON p.pictureId = pic.id
-                     WHERE p.id IN (
-                         SELECT productId
-                         FROM ChapterProduct
-                         WHERE chapterId = $categoryId
-                     ) AND p.isActive = True;";
+                     JOIN ChapterProduct AS cp
+                         ON p.id = cp.productId
+                     WHERE cp.chapterId = $categoryId AND p.isActive = True";
         /* Считаем товары по указанным параметрам */
         $result = $mysqli->query($sqlquery);
         if(!$result)

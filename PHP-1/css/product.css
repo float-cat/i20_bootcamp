@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Circe"),
+       local("Circe-Regular"),
+       url(fonts/circe_300.woff2) 
+       format("woff2");
+}
+
+@font-face {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("Circe"),
+       local("Circe-Regular"),
+       url(fonts/circe_600.woff2) 
+       format("woff2");
+}
+
+@font-face {
+  font-family: "Circe";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Circe"),
+       local("Circe-Regular"),
+       url(fonts/circe_700.woff2) 
+       format("woff2");
+}
+
+}body
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+button,
+button:active, button:focus {
+    outline: none !important;
+    border: 0px;
+}
+
+button::-moz-focus-inner {
+    border: 0 !important;
+}
+
+.notify_info
+{
+	position: fixed;
+	background: black;
+	opacity: .7;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 500px;
+	max-width: 80%;
+	border-radius: 5.5px;
+	color: white;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	width: 30em;
+	z-index: 3001;
+}
+
+.main-container
+{
+    width: 1000px;
+    height: 587px;
+    padding: 25px;
+    display: flex;
+}
+
+.photos
+{
+    display: flex;
+}
+
+.photo-container__item
+{
+    width: 90px;
+    height: 130px;
+    margin-bottom: 25px;
+}
+
+.photo-zoom img
+{
+    width: 340px;
+    height: 492px;
+}
+
+.space
+{
+    width: 60px;
+}
+
+.info-container__caption
+{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Circe", "Arial", sans-serif;
+}
+
+.info-links
+{
+    margin-bottom: 56px;
+}
+
+.info-stock__link,
+.info-links__link
+{
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Circe", "Arial", sans-serif;
+    margin-right: 25px;
+    color: #66a6ef;
+}
+
+.info-price
+{
+    display: flex;
+}
+
+.info-price__real, .info-price__discount,
+.info-price__promocode, .info-price__text
+{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Circe", "Arial", sans-serif;
+}
+
+.info-price__real
+{
+    color: #bfbebe;
+    margin-right: 10px;
+}
+
+.info-price__discount
+{
+    color: #9a9b9a;
+}
+
+.info-price__discount:after
+{
+    content: "\20BD";
+    margin-left: 5px;
+}
+
+.info-price__promocode
+{
+    margin-left: 36px;
+    color: #000000;
+}
+
+.info-price__promocode:after
+{
+    content: "\20BD";
+    margin-left: 5px;
+}
+
+.info-price__promocode-title
+{
+    margin-top: 4px;
+    font-size: 12px;
+    font-family: "Circe", "Arial", sans-serif;
+    color: #535353;
+}
+
+.info-stock
+{
+    margin-top: 36px;
+}
+
+.info-stock__deliver,
+.info-stock__in-stock
+{
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Circe", "Arial", sans-serif;
+    margin-left: 20px;
+}
+
+.info-stock__in-stock:before
+{
+    content: url("img/check-blue.png");
+    margin-right: 15px;
+}
+
+.info-stock__deliver:before
+{
+    content: url("img/car.png");
+    margin-right: 12px;
+}
+
+.counter
+{
+    border: 1px solid grey;
+    width: 102px;
+    padding: 0px;
+}
+
+.counter__button
+{
+    margin: 0px;
+    padding: 0px;
+    min-width: 25px;
+}
+
+.counter__button:disabled
+{
+    color: grey;
+}
+
+.counter__input
+{
+    text-align: center;
+    outline: none;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+}
+
+.info-form
+{
+    margin-top: 65px;
+}
+
+.info-form__button
+{
+    min-width: 165px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-right: 24px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: "Circe", "Arial", sans-serif;
+    background-color: #ffffff;
+}
+
+.info-form__button_blue
+{
+    color: #ffffff;
+    background-color: #006be5;
+}
+
+.info-description
+{
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Circe", "Arial", sans-serif;
+    color: #525252;
+    margin-top: 42px;
+}
+
+.info-repost
+{
+    margin-top: 36px;
+    line-height: 25px;
+    font-weight: 300;
+    font-family: "Circe", "Arial", sans-serif;
+    display: flex;
+}
+
+.info-repost__title
+{
+    margin-top: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    line-height: 26px;
+}
+
+.info-repost__picture
+{
+    height: 25px;
+    margin-left: 25px;
+}
+
+.info-repost__count
+{
+    width: 47px;
+    height: 33px;
+    padding: 0px;
+    margin-left: 25px;
+    line-height: 33px;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Circe", "Arial", sans-serif;
+    background-image: url("img/repost_count.png");
+}
