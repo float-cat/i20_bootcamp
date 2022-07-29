@@ -87,6 +87,14 @@ INSERT INTO Products (caption, price, priceWithDiscount, priceWithPromoCode, des
             (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
             (SELECT id FROM Pictures WHERE alt = 'Пиджак'));
 
+INSERT INTO Products (caption, price, priceWithDiscount, priceWithPromoCode, description, chapterId, pictureId, isActive)
+    VALUES ('Рубашка 1', 2699, 2499, 2227, 'Рубашка 1',
+            (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
+            (SELECT id FROM Pictures WHERE alt = 'Рубашка 1'), False),
+           ('Рубашка 2', 2341, 2000, 1900, 'Рубашка 2',
+            (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
+            (SELECT id FROM Pictures WHERE alt = 'Рубашка 1'), False);
+
 INSERT INTO ChapterProduct (chapterId, productId) VALUES
 (
     (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
@@ -183,6 +191,14 @@ INSERT INTO ChapterProduct (chapterId, productId) VALUES
 (
     (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
     (SELECT id FROM Products WHERE caption = 'Пиджак 15')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
+    (SELECT id FROM Products WHERE caption = 'Рубашка 1')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
+    (SELECT id FROM Products WHERE caption = 'Рубашка 2')
 );
 
 INSERT INTO ProductPicture (productId, pictureId) VALUES
@@ -289,4 +305,12 @@ INSERT INTO ProductPicture (productId, pictureId) VALUES
 (
     (SELECT id FROM Products WHERE caption = 'Пиджак 15'),
     (SELECT id FROM Pictures WHERE alt = 'Пиджак')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Рубашка 1'),
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка 1')
+),
+(
+    (SELECT id FROM Products WHERE caption = 'Рубашка 2'),
+    (SELECT id FROM Pictures WHERE alt = 'Рубашка 1')
 );

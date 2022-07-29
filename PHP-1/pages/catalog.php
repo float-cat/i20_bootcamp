@@ -6,6 +6,12 @@
  include 'modules/pages.php';
  $catalog->loadProducts($_GET['cat_id'] ?? 1, $pages->getSizeOfPages(), $pageindex);
 ?>
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>
+    <?=$catalog->getCaption()?>
+  </title>
 <style>
 .break {
   flex-basis: 100%;
@@ -30,6 +36,8 @@
     height: 130;
 }
 </style>
+ </head>
+ <body>
 <h2><?=$catalog->getCaption()?></h2>
 <br />
 <?=$catalog->getDescription()?>
@@ -57,3 +65,5 @@
   }
  ?>
 </div>
+ </body>
+</html>

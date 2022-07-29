@@ -62,9 +62,10 @@ SELECT c.id, c.caption, COUNT(cp.productid) AS amount
 FROM Chapters AS c
 LEFT JOIN ChapterProduct AS cp
     ON c.id = cp.chapterId
-JOIN Products AS p
+LEFT JOIN Products AS p
     ON p.id = cp.productId
 WHERE p.isActive = True
+    OR p.isActive IS NULL
 GROUP BY cp.chapterId
 ORDER BY amount DESC;
 
