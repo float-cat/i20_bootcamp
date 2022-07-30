@@ -39,7 +39,9 @@ class Product
         $row = mysqli_fetch_row($result);
         if(!$row)
         {
-            /* TODO: Редирект на 404 */
+            /* Редирект на 404 */
+            header('Location: page404.html');
+            exit;
         }
         /* Забираем из базы названия разделов товара */
         $query = "SELECT c.id, c.caption
@@ -98,6 +100,11 @@ class Product
             $this->priceWithPromoCode = $row['priceWithPromoCode'];
             $this->chapterId = (int)$row['chapterId'];
             $this->pictureId = (int)$row['pictureId'];
+        }
+        else
+        {
+            header('Location: page404.html');
+            exit;
         }
     }
 

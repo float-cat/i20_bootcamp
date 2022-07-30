@@ -20,6 +20,24 @@
  </head>
  <body>
   <main>
+   <?php
+    /* Если есть реферер и айди реферера есть в разделах товара */
+    if(isset($_SERVER['HTTP_REFERER']) and
+        isset($product->getCategoryes()[
+            (int)(explode('=', $_SERVER['HTTP_REFERER'])[1])
+        ]))
+    {
+   ?>
+   <a href="<?=$_SERVER['HTTP_REFERER']?>"><button>Назад</button></a>
+   <?php
+    }
+    else
+    {
+   ?>
+   <a href="products.php?cat_id=<?=$product->getChapterId()?>"><button>Назад</button></a>
+   <?php
+    }
+   ?>
    <div class="main-container">
     <div class="photos">
      <div class="photo-container">

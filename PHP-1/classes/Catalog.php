@@ -34,7 +34,9 @@ class Catalog
         $row = mysqli_fetch_row($result);
         if(!$row)
         {
-            /* TODO: Редирект на 404 */
+            /* Редирект на 404 */
+            header('Location: page404.html');
+            exit;
         }
         $this->name = $row[0];
         $this->description = $row[1];

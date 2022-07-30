@@ -194,13 +194,13 @@ button::-moz-focus-inner {
 
 .info-stock__in-stock:before
 {
-    content: url("img/check-blue.png");
+    content: url("../img/check-blue.png");
     margin-right: 15px;
 }
 
 .info-stock__deliver:before
 {
-    content: url("img/car.png");
+    content: url("../img/car.png");
     margin-right: 12px;
 }
 
@@ -298,5 +298,5 @@ button::-moz-focus-inner {
     font-size: 14px;
     font-weight: 300;
     font-family: "Circe", "Arial", sans-serif;
-    background-image: url("img/repost_count.png");
+    background-image: url("../img/repost_count.png");
 }

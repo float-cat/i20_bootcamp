@@ -4,7 +4,8 @@ INSERT INTO Chapters (caption, description) VALUES
     ('Рубашки', 'Красивые рубашки со всего света'),
     ('Свитеры', 'Вязанные свитеры для любителей потеплее'),
     ('Брюки', 'Брюки для тех, кому надоели шорты'),
-    ('Пиджаки', 'Стильные пиджаки всех размеров');
+    ('Пиджаки', 'Стильные пиджаки всех размеров'),
+    ('Шорты', 'Пустая категория');
 
 INSERT INTO Pictures (alt, url) VALUES
 ('Рубашка', 'https://example.com/not-exist-pict-1.png'),
@@ -98,6 +99,14 @@ INSERT INTO Products (caption, price, priceWithDiscount, priceWithPromoCode, des
 INSERT INTO ChapterProduct (chapterId, productId) VALUES
 (
     (SELECT id FROM Chapters WHERE caption = 'Рубашки'),
+    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Свитеры'),
+    (SELECT id FROM Products WHERE caption = 'Рубашка Medicine')
+),
+(
+    (SELECT id FROM Chapters WHERE caption = 'Пиджаки'),
     (SELECT id FROM Products WHERE caption = 'Рубашка Medicine')
 ),
 (
