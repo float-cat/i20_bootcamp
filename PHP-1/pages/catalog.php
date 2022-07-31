@@ -39,6 +39,7 @@
  </head>
  <body>
  <a href="products.php"><button>Назад</button></a>
+ <a href="feedback.php">Обратная связь</a>
 <h2><?=$catalog->getCaption()?></h2>
 <br />
 <?=$catalog->getDescription()?>

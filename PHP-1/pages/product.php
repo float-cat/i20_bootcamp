@@ -38,6 +38,7 @@
    <?php
     }
    ?>
+   <a href="feedback.php">Обратная связь</a>
    <div class="main-container">
     <div class="photos">
      <div class="photo-container">

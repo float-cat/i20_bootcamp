@@ -76,3 +76,21 @@ CREATE TABLE ProductPicture (
     -- Зависимость к первичному ключу картинки
     FOREIGN KEY (pictureId) REFERENCES Pictures(id)
 );
+
+-- Таблица для обратной связи
+CREATE TABLE Feedback (
+    -- Уникальный идентификатор записи
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    -- Имя пользователя
+    name NVARCHAR(60) NOT NULL,
+    -- Email пользователя
+    email NVARCHAR(60) NOT NULL,
+    -- Год рождения пользователя
+    year NVARCHAR(4) NOT NULL,
+    -- Пол пользователя
+    sex ENUM('Male', 'Female') NOT NULL,
+    -- Тема сообщения
+    topic NVARCHAR(30) NOT NULL,
+    -- Сообщение
+    info NVARCHAR(400) NOT NULL
+);

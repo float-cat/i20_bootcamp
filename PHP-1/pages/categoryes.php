@@ -90,6 +90,7 @@
   </style>
  </head>
  <body>
+  <a href="feedback.php">Обратная связь</a>
   <div class="container">
 <?php
     $i = 1;
